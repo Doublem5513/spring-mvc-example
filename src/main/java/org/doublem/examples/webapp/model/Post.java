@@ -101,12 +101,4 @@ public class Post {
                 '}';
     }
 
-    public static void main(String[] args) {
-        Post post = new Post();
-        post.setTitle("My first saved post");
-        post.setAuthor("Matija Matosevic");
-        post.setCreated(new Date());
-        post.setText("This is my first post, created as an example for my Spring MVC application.");
-        System.out.println(post);
-    }
 }
