@@ -1,0 +1,27 @@
+body{
+    background-color: lightgray;
+}
+
+div.post-list{
+    background-color: lightblue;
+    width: 640px;
+    padding: 10px;
+    margin: 10px;
+}
+
+div.post{
+    background-color: darkblue;
+    color: wheat;
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+}
+
+div.post h2{
+    color: white;
+}
+
+div.post p{
+    color: lightgray;
+}
+
