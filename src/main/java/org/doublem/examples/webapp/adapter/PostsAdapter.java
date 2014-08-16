@@ -15,7 +15,6 @@ import java.util.Date;
  */
 public class PostsAdapter {
     private static final String POSTS_DB_FILE = System.getProperty("user.home") + "/webapp/forum/posts/posts.db";
-    private static final String OBJECT_PROPERTIES_DELIMITER = ", ";
 
     private PostsDataProvider dataProvider = new PostsDataProviderImpl();
 
