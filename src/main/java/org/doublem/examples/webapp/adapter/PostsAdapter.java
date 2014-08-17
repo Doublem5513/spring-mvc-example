@@ -2,13 +2,8 @@ package org.doublem.examples.webapp.adapter;
 
 import org.doublem.examples.webapp.model.Post;
 import org.doublem.examples.webapp.provider.PostsDataProvider;
-import org.doublem.examples.webapp.provider.PostsDataProviderImpl;
-import org.doublem.examples.webapp.utils.FileDataUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Required;
 
-import java.io.*;
-import java.lang.reflect.Field;
 import java.util.Collection;
 import java.util.Date;
 
@@ -38,9 +33,6 @@ public class PostsAdapter {
         post.setText(text);
         post.setAuthor(author);
         post.setAvatar(avatar);
-
-        long lastId = FileDataUtils.findLastId(new File(POSTS_DB_FILE));
-        post.setId(lastId+1);
         post.setCreated(new Date());
 
         if(dataProvider != null){
