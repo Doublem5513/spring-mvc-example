@@ -2,6 +2,7 @@ package org.doublem.examples.webapp.manager;
 
 import org.doublem.examples.webapp.adapter.PostsAdapter;
 import org.doublem.examples.webapp.model.Post;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Collection;
 
@@ -9,7 +10,9 @@ import java.util.Collection;
  * Created by mint on 16/8/14.
  */
 public class PostsManager {
-    PostsAdapter adapter = new PostsAdapter();
+
+    @Autowired
+    private PostsAdapter adapter;
 
     public Collection<Post> getAllPosts(){
         return adapter.findAllPosts();

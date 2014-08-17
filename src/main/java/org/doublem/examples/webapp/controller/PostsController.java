@@ -1,6 +1,7 @@
 package org.doublem.examples.webapp.controller;
 
 import org.doublem.examples.webapp.manager.PostsManager;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,7 +14,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 @RequestMapping("/posts")
 public class PostsController {
-    PostsManager manager = new PostsManager();
+
+    @Autowired
+    private PostsManager manager;
 
     @RequestMapping(method = RequestMethod.GET)
     public String getPosts(ModelMap model){

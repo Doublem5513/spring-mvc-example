@@ -4,6 +4,8 @@ import org.doublem.examples.webapp.model.Post;
 import org.doublem.examples.webapp.provider.PostsDataProvider;
 import org.doublem.examples.webapp.provider.PostsDataProviderImpl;
 import org.doublem.examples.webapp.utils.FileDataUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Required;
 
 import java.io.*;
 import java.util.Collection;
@@ -16,7 +18,8 @@ import java.util.Date;
 public class PostsAdapter {
     private static final String POSTS_DB_FILE = System.getProperty("user.home") + "/webapp/forum/posts/posts.db";
 
-    private PostsDataProvider dataProvider = new PostsDataProviderImpl();
+    @Autowired
+    private PostsDataProvider dataProvider;
 
     public Collection<Post> findAllPosts(){
 

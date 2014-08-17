@@ -13,6 +13,12 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
+    <bean class="org.doublem.examples.webapp.provider.PostsDataProviderImpl"/>
+
+    <bean class="org.doublem.examples.webapp.adapter.PostsAdapter"/>
+
+    <bean class="org.doublem.examples.webapp.manager.PostsManager"/>
+
     <mvc:resources location="resources" mapping="/resources/**"/>
     <mvc:annotation-driven />
     <mvc:default-servlet-handler/>
