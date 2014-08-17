@@ -75,7 +75,7 @@ label {
 }
 
 input[type=text], textarea{
-    font-family: sans-serif;
+    font-family: monospace;
     background-color: darkblue;
     color: white;
     display: block;
