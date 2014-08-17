@@ -1,0 +1,12 @@
+For shell access go to /forum/shell
+
+Example script that fetches all posts:
+import org.doublem.examples.webapp.adapter.PostsAdapter;
+
+def postList = appContext.getBean(PostsAdapter.class).findAllPosts();
+
+String posts = "";
+for(def p: postList){
+   posts += p.toString() + "";
+}
+return(posts);
