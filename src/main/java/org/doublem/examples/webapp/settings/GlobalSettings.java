@@ -7,10 +7,11 @@ import java.io.File;
  */
 public class GlobalSettings {
 
-    public static final String DB_FILE = System.getProperty("user.home") +
-            File.separator + "webapp" +
-            File.separator + "forum" +
-            File.separator + "forum.db";
+//    public static final String DB_FILE = System.getProperty("user.home") +
+//            File.separator + "webapp" +
+//            File.separator + "forum" +
+//            File.separator + "forum.db";
+    public static final String DB_FILE = "forum.db";
 
     public static final String DB_DATE_FORMAT = "dd.MM.yyyy HH:mm:ss";
 }
