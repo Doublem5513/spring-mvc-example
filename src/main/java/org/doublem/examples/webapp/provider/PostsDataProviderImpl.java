@@ -87,6 +87,22 @@ public class PostsDataProviderImpl implements PostsDataProvider {
     }
 
     @Override
+    public void deletePost(long id) {
+        try {
+            c.setAutoCommit(false);
+            java.sql.Statement statement = c.createStatement();
+            String query = "DELETE FROM posts WHERE id=" + id;
+            statement.executeUpdate(query);
+            c.commit();
+
+            statement.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
     protected void finalize() throws Throwable {
         super.finalize();
         c.close();

@@ -10,4 +10,5 @@ import java.util.Collection;
 public interface PostsDataProvider {
     void savePost(Post post);
     Collection<Post> getAllPosts();
+    void deletePost(long id);
 }

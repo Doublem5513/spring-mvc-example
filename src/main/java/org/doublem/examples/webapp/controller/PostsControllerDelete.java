@@ -11,27 +11,11 @@ import org.springframework.web.bind.annotation.RequestParam;
  * Created by mint on 16/8/14.
  */
 @Controller
-@RequestMapping("/forum/posts")
-public class PostsController {
+@RequestMapping("/forum/posts/delete")
+public class PostsControllerDelete {
     PostsManager manager = new PostsManager();
 
-    @RequestMapping(method = RequestMethod.GET)
-    public String getPosts(ModelMap model){
-        model.addAttribute("posts", manager.getAllPosts());
-        return "posts";
-    }
-
     @RequestMapping(method = RequestMethod.POST)
-    public String addPost(ModelMap model, @RequestParam("title") String title, @RequestParam("text") String text,
-                          @RequestParam("author") String author, @RequestParam("avatar") String avatar){
-
-        manager.savePost(title, text, author, avatar);
-
-        model.addAttribute("posts", manager.getAllPosts());
-        return "posts";
-    }
-
-    @RequestMapping(method = RequestMethod.DELETE)
     public String deletePost(ModelMap model, @RequestParam("id") String id){
         manager.deletePost(id);
 

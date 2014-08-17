@@ -47,4 +47,8 @@ public class PostsAdapter {
         throw new RuntimeException("Posts Data Provider is not initialized!");
     }
 
+    public void deletePost(String id){
+        dataProvider.deletePost(Long.parseLong(id));
+    }
+
 }

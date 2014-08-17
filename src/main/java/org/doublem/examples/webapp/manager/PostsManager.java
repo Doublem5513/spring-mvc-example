@@ -19,4 +19,8 @@ public class PostsManager {
         return adapter.addPost(title, text, author, avatar);
     }
 
+    public void deletePost(String id){
+        adapter.deletePost(id);
+    }
+
 }

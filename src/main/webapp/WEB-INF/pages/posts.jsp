@@ -74,7 +74,13 @@
                 <img src="<c:out value="${post.avatar}"/>"/>
                 <p><c:out value="${post.text}"/></p>
                 <div class="splitter"></div>
-                <div class="post-footer">Created by: <c:out value="${post.author}"/>, <c:out value="${post.created}"/> </div>
+                <div class="post-footer">
+                    Created by: <c:out value="${post.author}"/>, <c:out value="${post.created}"/>
+                    <form action="/forum/posts/delete" method="post">
+                        <input type="submit" name="id" value="${post.id}">
+                    </form>
+                    <!-- <a method="delete" href="/forum/posts/delete?id=${post.id}">delete</a> -->
+                </div>
             </div>
         </c:forEach>
     </div>
