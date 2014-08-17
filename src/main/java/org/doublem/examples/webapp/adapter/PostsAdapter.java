@@ -12,7 +12,6 @@ import java.util.Date;
  * Created by mint on 16/8/14.
  */
 public class PostsAdapter {
-    private static final String POSTS_DB_FILE = System.getProperty("user.home") + "/webapp/forum/posts/posts.db";
 
     @Autowired
     private PostsDataProvider dataProvider;
