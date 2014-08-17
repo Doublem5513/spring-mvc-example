@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * Created by mint on 16/8/14.
  */
 @Controller
-@RequestMapping("/forum/posts")
+@RequestMapping("/posts")
 public class PostsController {
     PostsManager manager = new PostsManager();
 
@@ -31,7 +31,7 @@ public class PostsController {
         return "posts";
     }
 
-    @RequestMapping(method = RequestMethod.DELETE)
+    @RequestMapping(value = "/delete", method = RequestMethod.POST)
     public String deletePost(ModelMap model, @RequestParam("id") String id){
         manager.deletePost(id);
 

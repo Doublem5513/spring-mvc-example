@@ -11,59 +11,7 @@
 <html>
 <head>
     <title>Forum posts</title>
-    <style type="text/css">
-        body{
-            background-color: lightgray;
-        }
-
-        div.post-list{
-            background-color: lightblue;
-            width: 640px;
-            padding: 10px;
-            margin: 10px;
-        }
-
-        div.post{
-            font-family: sans-serif;
-            background-color: darkblue;
-            color: wheat;
-            width: 100%;
-            padding: 10px;
-            margin: 10px;
-        }
-
-        div.post h2{
-            font-family: serif;
-            color: white;
-            margin: 0;
-            padding: 10px;
-            width: 100%;
-            background-color: blue;
-            text-align: center;
-        }
-
-        div.post img{
-            max-width: 128px;
-            max-height: 128px;
-            float: left;
-            margin: 10px;
-            border-right: 1px dashed gray;
-        }
-
-        div.post p{
-            color: lightgray;
-        }
-
-        div.splitter{
-            clear: both;
-            width: 100%;
-        }
-
-        div.post-footer{
-            border-bottom: 1px dashed gray;
-        }
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="../../resources/styles/posts.css"/>
 </head>
 <body>
     <h1>Forum posts</h1>
@@ -75,22 +23,31 @@
                 <p><c:out value="${post.text}"/></p>
                 <div class="splitter"></div>
                 <div class="post-footer">
-                    Created by: <c:out value="${post.author}"/>, <c:out value="${post.created}"/>
-                    <form action="/forum/posts/delete" method="post">
-                        <input type="submit" name="id" value="${post.id}">
+                    <div>Created by: <c:out value="${post.author}"/>, <c:out value="${post.created}"/></div>
+                    <form action="${pageContext.request.contextPath}/forum/posts/delete" method="post">
+                        <input type="submit" name="submit" value="Delete">
+                        <input type="hidden" name="id" value="${post.id}">
                     </form>
-                    <!-- <a method="delete" href="/forum/posts/delete?id=${post.id}">delete</a> -->
                 </div>
+                <div class="splitter"></div>
             </div>
         </c:forEach>
     </div>
     <div>
-        <form action="/forum/posts" method="POST">
-            <input type="text" name="title" value="Title">
-            <input type="text" name="text" value="Text">
-            <input type="text" name="author" value="Author">
-            <input type="text" name="avatar" value="Avatar URL">
-            <input type="submit" name="submit" value="submit">
+        <form action="${pageContext.request.contextPath}/forum/posts" method="POST">
+            <label for="title">Title</label>
+            <input type="text" name="title" value="Title" id="title"/>
+
+            <label for="text">Text</label>
+            <textarea name="text" cols="60" rows="10" id="text">Text</textarea>
+
+            <label for="author">Author</label>
+            <input type="text" name="author" value="Author" id="author"/>
+
+            <label for="avatar">Avatar URL</label>
+            <input type="text" name="avatar" value="Avatar URL" id="avatar"/>
+
+            <input type="submit" name="submit" value="submit"/>
         </form>
     </div>
 </body>

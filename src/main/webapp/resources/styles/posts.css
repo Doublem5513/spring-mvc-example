@@ -7,9 +7,12 @@ div.post-list{
     width: 640px;
     padding: 10px;
     margin: 10px;
+    border-left: 1px dashed grey;
+    border-top: 1px dashed grey;
 }
 
 div.post{
+    font-family: sans-serif;
     background-color: darkblue;
     color: wheat;
     width: 100%;
@@ -18,10 +21,74 @@ div.post{
 }
 
 div.post h2{
+    font-family: serif;
     color: white;
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+    background-color: blue;
+    text-align: center;
+    border-bottom: 1px dashed grey;
+    border-right: 1px dashed grey;
+}
+
+div.post img{
+    max-width: 128px;
+    max-height: 128px;
+    float: left;
+    margin: 10px;
+    border-right: 1px dashed gray;
 }
 
 div.post p{
     color: lightgray;
 }
 
+div.splitter{
+    clear: both;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+div.post-footer{
+    border-bottom: 1px dashed gray;
+}
+
+div.post-footer div{
+    margin-top: 10px;
+    width: 75%;
+    float: left;
+}
+
+div.post-footer form input{
+    margin-top: 10px;
+    float: right;
+}
+
+label {
+    display: block;
+    width: 150px;
+    float: left;
+    clear: left;
+    margin: 2px 4px 6px 4px;
+    text-align: right;
+}
+
+input[type=text], textarea{
+    font-family: sans-serif;
+    background-color: darkblue;
+    color: white;
+    display: block;
+    padding: 5px;
+}
+
+input[name="title"]{
+    font-family: serif;
+    font-size: 18px;
+    width: 400px;
+}
+
+input[name="text"]{
+    width: 400px;
+    height: 200px;
+}

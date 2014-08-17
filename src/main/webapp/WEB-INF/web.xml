@@ -13,10 +13,8 @@
 
 	<servlet-mapping>
 		<servlet-name>mvc-dispatcher</servlet-name>
-		<url-pattern>/</url-pattern>
+		<url-pattern>/forum/*</url-pattern>
 	</servlet-mapping>
 
-    <welcome-file-list>
-        <welcome-file>/forum/posts</welcome-file>
-    </welcome-file-list>
+
 </web-app>

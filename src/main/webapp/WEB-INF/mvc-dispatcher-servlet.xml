@@ -13,4 +13,8 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
+    <mvc:resources location="resources" mapping="/resources/**"/>
+    <mvc:annotation-driven />
+    <mvc:default-servlet-handler/>
+
 </beans>
