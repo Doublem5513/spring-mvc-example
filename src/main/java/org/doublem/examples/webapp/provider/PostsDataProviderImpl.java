@@ -11,6 +11,7 @@ import java.sql.SQLException;
 import java.util.Collection;
 import java.util.Date;
 import java.util.LinkedList;
+import java.util.Properties;
 
 /**
  * Created by mint on 16/8/14.

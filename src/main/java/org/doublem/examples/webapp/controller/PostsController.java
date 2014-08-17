@@ -38,4 +38,12 @@ public class PostsController {
         model.addAttribute("posts", manager.getAllPosts());
         return "posts";
     }
+
+    @RequestMapping(value = "/export", method = RequestMethod.GET)
+    public String exportPosts(ModelMap model){
+
+        model.addAttribute("posts", manager.getAllPosts());
+
+        return "dbdump";
+    }
 }
